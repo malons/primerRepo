@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>OFIX3 Inicio</title>
-    <link rel="stylesheet" href="?">
-    <script src="?">O
-    </script>
-  </head>
-  <body>
-    <!-- page content -->
-    <h1>Ofix3 Inicio</h1>
-    <p align="left">23/09/2023 Git Hub
-  </body>
+<html dir="ltr" lang="en-EN">
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Revalia">
+	<title>CHESS</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style>
+		h1 {font-family: "Revalia", sans-serif;}p {font-family: "sans-serif",Arial;color=#606060;font-size:14px; font-style: italic;}
+	</style>
+<script>
+	Y=document;a=-1;t=1;e=0;k=0;cm=1;cx=confirm("White move first? --> OK \nBlack move first?  --> CANCEL");if(cx){cm=0;}else{cm=1};p=new Array;c=new Array;q=new Array;d=new Array;b=new Array;q[1]=0;q[2]=0;g=".gif";u="s"+g;for(i=0;i<64;i++){c[i]=0;p[i]=0;d[i]=0;b[i]=0;}for(i=0;i<16;i++){c[i]=2;c[63-i]=1;p[i]=1;p[63-i]=1}p[0]=4;p[1]=3;p[2]=5;p[3]=7;p[4]=8;p[5]=5;p[6]=3;p[7]=4;p[63]=4;p[62]=3;p[61]=5;p[60]=8;p[59]=7;p[58]=5;p[57]=3;p[56]=4;
+	function DI(i){return Y.images[i].src;}
+	function IC(n,m){Y.images[n].src=m;}
+	function YA(i){if(i<0)return -1;return 1;}
+	function G(i){if(p[i]==0){im=u;}else{if(c[i]==1){im="w"+p[i]+g;}else{im="b"+p[i]+g;}};return im;}
+	function D(s,n){if(cm<1){if(a==-1){if(c[s]==t){B('blue');}else{B('navy');}}else{if(M(a,s)==1){B('blue');}else{B('navy');}}if(s!=a){H(s,n);}}}
+	function X(v,w){IC(v,DI(w));p[v]=p[w];c[v]=c[w];IC(w,u);H(w,0);p[w]=0;c[w]=0;}
+	function E(s,n){if(a>-1){if(M(a,s)==1){if(p[a]==8){q[t]=1;if(e==1&(C(s)==1|C(s)==6)){z=-YA(C(s)-4);X(s+z,s-z);}}if(p[a]==1&R(s)==0){p[a]=7;IC(a,"w7"+g);}e=0;cm=1;si=DI(s);sp=p[s];sc=c[s];X(s,a);I();T(2);for(i=0;i<64;i++){	if(p[i]==8&c[i]==1&b[i]>0&cm>0){cm=0;X(a,s);IC(s,si);p[s]=sp;c[s]=sc;window.alert("Check");}}a=-1;}else{H(a,0);if(c[s]==c[a]){H(s,n);a=s;}else{H(s,0);a=-1;}}}else{if((p[s]!=0)&(c[s]==t)){H(s,n);a=s;}}if(cm)setTimeout("P()",0);}
+	function I(){for(i=0;i<64;i++){b[i]=0;}}
+	function P(){if(t==1){t=2;}else{t=1;}if(1==1&t==2){t=2;n=0;o=new Array;z=new Array;l=new Array;r=new Array;for(v=0;v<64;v++){if(c[v]==2){for(w=0;w<64;w++){if(M(v,w)){op=p[w];oc=c[w];p[w]=p[v];c[w]=c[v];if(p[w]==1&R(w)==7){p[w]=7;}p[v]=0;c[v]=0;I();o[n]=v;z[n]=w;r[n]=0;l[n]=(T(2)+T(1)+4*op)+Math.random();if(b[w]<0){l[n]=l[n]-3*p[w];}if(k){l[n]=-1000;}I();T(1);for(i=0;i<64;i++){if(c[i]==2&b[i]<0){l[n]=l[n]-4*p[i];}}p[v]=p[w];c[v]=c[w];p[w]=op;c[w]=oc;for(i=0;i<n+1;i++){if(l[n]>l[i]){r[n]=r[n]+1;}{r[i]=r[i]+1;}}n=n+1;}}}}h=n;for(i=0;i<n;i++){if(r[i]==n){h=i;}}if(l[h]>-1000){X(z[h],o[h]);IC(z[h],"b"+p[z[h]]+g);}else{window.alert("Checkmate!");}t=1;}cm=0;}
+	function T(tn){tb=0;k=0;ot=t;t=tn;for(j=0;j<64;j++){if(c[j]==t){M(j,-1);for(i=0;i<64;i++){if(d[i]>0){if(t==2){b[i]=b[i]+1;if(b[i]>2){b[i]=2;}{tb=tb+1;}}if(t==1){b[i]=b[i]-1;if(b[i]<-2){b[i]=-2;}{tb=tb-1;}if(p[i]==8&c[i]==2){k=1;}}}}}}t=ot;return tb;}
+	function H(s,n){Y.images[s].width=50-n*2;Y.images[s].height=50-n*2;Y.images[s].border=n;}
+	function B(i){Y.linkColor=i;Y.alinkColor=i;Y.vlinkColor=i;}
+	function M(m,n){re=0;x=C(m);y=R(m);for(i=0;i<64;i++){d[i]=0;}if(p[m]==1){if(K(x,y+F(1))==1){d[8*(y+F(1))+x]=1;}if(K(x-1,y+F(1))==2){d[8*(y+F(1))+x-1]=1;}if(K(x+1,y+F(1))==2){d[8*(y+F(1))+x+1]=1;}if((y==6|y==1)&K(x,y+F(1))==1&K(x,y+F(2))==1){d[8*(y+F(2))+x]=1;}}if(p[m]==4){L(x,y,0,9);}if(p[m]==3){for(va=-2;va<3;va++){for(wa=-2;wa<3;wa++){if(Math.abs(va)!=Math.abs(wa)&va!=0&wa!=0&K(x+va,y+wa)>0){d[8*(y+wa)+x+va]=1;}}}}if(p[m]==5){L(x,y,1,9);}if(p[m]==7){L(x,y,1,9);L(x,y,0,9);}if(p[m]==8){L(x,y,1,2);L(x,y,0,2);if(q[t]==0&R(n)==y&C(n)==1&p[n-1]==4&p[n]==0&p[n+1]==0&p[n+2]==0){d[n]=1;e=1;}if(q[t]==0&R(n)==y&C(n)==6&p[n+1]==4&p[n]==0&p[n-1]==0){d[n]=1;e=1;}}if(d[n]){re=1;}return re;}
+	function K(v,w){sq=w*8+v;if(v>-1&v<8&w>-1&w<8){if(c[sq]!=t){if(c[sq]==0){return 1;}{return 2;}}else{return 0;}}else{return 0;}}
+	function L(m,n,l,s){S=1;U=1;V=1;W=1;for(i=1;i<s;i++){f=l*i;A=K(m-i,n-f);J=K(m+f,n-i);N=K(m+i,n+f);O=K(m-f,n+i);if(A>0&S>0){d[8*(n-f)+m-i]=1;if(A>1){S=0;}}else{S=0;}if(J>0&U>0){d[8*(n-i)+m+f]=1;if(J>1){U=0;}}else{U=0;}if(N>0&V>0){d[8*(n+f)+m+i]=1;if(N>1){V=0;}}else{V=0;}if(O>0&W>0){d[8*(n+i)+m-f]=1;if(O>1){W=0;}}else{W=0;}}}
+	function F(i){if(t==1){return -i;}else{return i;}}
+	function R(i){return (Math.floor(i/8));}
+	function C(i){return (i-(Math.floor(i/8)*8));}
+	function DW(i){Y.write(i);}
+</script>
+</head>
+<body bgColor=white><h1 align="center">
+	<font family="Revalia"size="6" color=#606060><span onmouseover="this.innerHTML='Exito';" onmouseout="this.innerHTML='ofix3';">ofix3</span></font></h1>
+	<script>
+	j="<table border=0 cellspacing=1 cellpadding=0 align=center ";DW(j+"><tr valign=top><td><center><BR>"+j+">");i=1;s=0;for(v=0;v<8;v++){DW("<tr>");for(w=0;w<8;w++){if((i/2)==Math.floor(i/2)){n="006563";}else{n="9c9a63";}DW("<td bgcolor="+n+"><a href=javascript:E("+s+",5) onMouseOut=D("+s+",0) onMouseOver=D("+s+",2)><img src="+G(s)+" height=50 width=50 border=0></a></td>");i++;s++;}DW("</tr>");i++;}
+	</script>
+	</table></td></tr><tr><td><p align=center><i>To move click Piece and Square to send. Reload for new game.</i></p></td></tr></table>
+</body>
 </html>
